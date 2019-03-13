@@ -1,0 +1,28 @@
+.form-control {
+  border-color: #fff !important;
+  border-radius: 0px;
+}
+@media screen and (min-width: 992px) {
+  .form-control {
+    width: 290px;
+  }
+}
+.form-group {
+  margin-bottom: 1px !important;
+}
+.input-group {
+  margin-left: 5px;
+}
+.input-group-text {
+  background-color: white;
+  border-color: #fff !important;
+  border-radius: 0px;
+}
+button {
+  border-radius: 0px;
+}
+@media screen and (min-width: 992px) {
+  button {
+    width: 335px;
+  }
+}
