@@ -1,0 +1,45 @@
+.fa-user {
+  margin-top: 30px;
+  color: white;
+  font-size: 5rem;
+}
+.form-control {
+  border-color: #fff !important;
+  border-radius: 0px;
+}
+@media screen and (min-width: 992px) {
+  .form-control {
+    width: 290px;
+  }
+}
+
+.input-group {
+  margin-left: 5px;
+}
+.input-group-text {
+  background-color: white;
+  border-color: #fff !important;
+  border-radius: 0px;
+}
+button {
+  border-radius: 0px;
+}
+@media screen and (min-width: 992px) {
+  button {
+    width: 335px;
+  }
+}
+.form-check {
+  color: #fff;
+}
+a {
+  margin-left: 15%;
+}
+.logo {
+  color: #fff;
+}
+.fa-facebook {
+  color: #3a559f;
+  background: #fff;
+  font-size: 2rem;
+}
