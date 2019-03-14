@@ -26,3 +26,9 @@ button {
     width: 335px;
   }
 }
+#bd {
+  color: #fff;
+}
+.radio-inline {
+  margin-right: 15px;
+}
