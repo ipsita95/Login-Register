@@ -22,7 +22,7 @@
               placeholder="First Name"
             />
           </div>
-          <div *ngIf="name.touched" class="alert alert-danger">
+          <div *ngIf="name.touched && name.invalid" class="text-danger">
             First Name is required
           </div>
         </div>
@@ -44,7 +44,7 @@
               placeholder="Last Name"
             />
           </div>
-          <div *ngIf="title.touched" class="alert alert-danger">
+          <div *ngIf="title.touched && title.invalid" class="text-danger">
             Last Name is required
           </div>
         </div>
@@ -66,10 +66,7 @@
               placeholder="Email"
             />
           </div>
-          <div
-            *ngIf="email.touched && email.invalid"
-            class="alert alert-danger"
-          >
+          <div *ngIf="email.touched && email.invalid" class="text-danger">
             Email is required
           </div>
         </div>
@@ -197,17 +194,15 @@
               placeholder="Password"
             />
           </div>
-          <div
-            *ngIf="password.touched && password.invalid"
-            class="alert alert-danger"
-          >
+          <div *ngIf="password.touched && password.invalid" class="text-danger">
             Password is required
           </div>
         </div>
       </div>
+
       <div class="form-row">
         <div class="form-group">
-          <label for="password"></label>
+          <label for="cpassword"></label>
           <div class="input-group">
             <div class="input-group-prepend">
               <div class="input-group-text">
@@ -215,12 +210,18 @@
               </div>
             </div>
             <input
-              formControlName="password"
+              formControlName="cpassword"
               type="password"
-              id="password"
+              id="cpassword"
               class="form-control"
               placeholder="Confirm Password"
             />
+          </div>
+          <div
+            *ngIf="cpassword.touched && cpassword.invalid"
+            class="text-danger"
+          >
+            Password is required
           </div>
         </div>
       </div>

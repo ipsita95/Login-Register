@@ -13,10 +13,11 @@ import {
 })
 export class RegisterComponent {
   form = new FormGroup({
-    name: new FormControl("", Validators.required),
-    title: new FormControl("", Validators.required),
+    name: new FormControl("", [Validators.required, Validators.minLength(3)]),
+    title: new FormControl("", [Validators.required, Validators.minLength(3)]),
     email: new FormControl("", [Validators.email, Validators.required]),
-    password: new FormControl("", Validators.required)
+    password: new FormControl("", Validators.required),
+    cpassword: new FormControl("", Validators.required)
   });
   get name() {
     return this.form.get("name");
@@ -29,5 +30,8 @@ export class RegisterComponent {
   }
   get password() {
     return this.form.get("password");
+  }
+  get cpassword() {
+    return this.form.get("cpassword");
   }
 }
