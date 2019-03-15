@@ -22,8 +22,8 @@
               placeholder="First Name"
             />
           </div>
-          <div *ngIf="name.touched && name.invalid" class="text-danger">
-            First Name is required
+          <div *ngIf="name.touched && name.invalid" class="text-warning">
+            First Name must be minimum 3 characters.
           </div>
         </div>
       </div>
@@ -44,8 +44,8 @@
               placeholder="Last Name"
             />
           </div>
-          <div *ngIf="title.touched && title.invalid" class="text-danger">
-            Last Name is required
+          <div *ngIf="title.touched && title.invalid" class="text-warning">
+            Last Name must be minimum 3 characters.
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@
               placeholder="Email"
             />
           </div>
-          <div *ngIf="email.touched && email.invalid" class="text-danger">
+          <div *ngIf="email.touched && email.invalid" class="text-warning">
             Email is required
           </div>
         </div>
@@ -88,8 +88,8 @@
               placeholder="Phone"
             />
           </div>
-          <div *ngIf="phone.touched && phone.invalid" class="text-danger">
-            Phone no is required
+          <div *ngIf="phone.touched && phone.invalid" class="text-warning">
+            Phone no must be 10 digits
           </div>
         </div>
       </div>
@@ -110,8 +110,11 @@
               placeholder="Postcode"
             />
           </div>
-          <div *ngIf="postcode.touched && postcode.invalid" class="text-danger">
-            Postcode is required
+          <div
+            *ngIf="postcode.touched && postcode.invalid"
+            class="text-warning"
+          >
+            Postcode must be 6 digits
           </div>
         </div>
       </div>
@@ -120,80 +123,109 @@
       </div>
       <div class="form-row mt-2 ml-1">
         <div class="form-group col-md-5">
-          <label for="month"></label>
-          <select id="month" name="month">
-            <option>Month</option>
-            <option>January</option>
-            <option>February</option>
-            <option>March</option>
-            <option>April</option>
-            <option>May</option>
-            <option>June</option>
-            <option>July</option>
-            <option>August</option>
-            <option>September</option>
-            <option>October</option>
-            <option>November</option>
-            <option>December</option>
-          </select>
+          <input
+            list="Month"
+            name="month"
+            formControlName="month"
+            class="form-control"
+            placeholder="Month"
+            id="M"
+          />
+          <div *ngIf="month.touched && month.invalid" class="text-warning">
+            Month is required
+          </div>
+          <datalist id="Month">
+            <option value="January"> </option>
+            <option value="February"> </option>
+            <option value="March"> </option>
+            <option value="April"> </option>
+            <option value="May"> </option>
+            <option value="June"> </option>
+            <option value="July"> </option>
+            <option value="August"> </option>
+            <option value="September"> </option>
+            <option value="October"> </option>
+            <option value="November"> </option>
+            <option value="December"> </option>
+          </datalist>
         </div>
         <div class="form-group col-md-3">
-          <label for="day"></label>
-          <select id="day" name="day">
-            <option>Day</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
-            <option>10</option>
-            <option>11</option>
-            <option>12</option>
-            <option>13</option>
-            <option>14</option>
-            <option>15</option>
-            <option>16</option>
-            <option>17</option>
-            <option>18</option>
-            <option>19</option>
-            <option>20</option>
-            <option>21</option>
-            <option>22</option>
-            <option>23</option>
-            <option>24</option>
-            <option>25</option>
-            <option>26</option>
-            <option>27</option>
-            <option>28</option>
-            <option>29</option>
-            <option>30</option>
-            <option>31</option>
-          </select>
+          <input
+            list="Day"
+            name="day"
+            formControlName="day"
+            class="form-control"
+            placeholder="Day"
+            id="D"
+          />
+          <div *ngIf="day.touched && day.invalid" class="text-warning">
+            Day is required
+          </div>
+          <datalist id="Day">
+            <option value="1"> </option>
+            <option value="2"> </option>
+            <option value="3"> </option>
+            <option value="4"> </option>
+            <option value="5"> </option>
+            <option value="6"> </option>
+            <option value="7"> </option>
+            <option value="8"> </option>
+            <option value="9"> </option>
+            <option value="10"> </option>
+            <option value="11"> </option>
+            <option value="12"> </option>
+            <option value="13"> </option>
+            <option value="14"> </option>
+            <option value="15"> </option>
+            <option value="16"> </option>
+            <option value="17"> </option>
+            <option value="18"> </option>
+            <option value="19"> </option>
+            <option value="20"> </option>
+            <option value="21"> </option>
+            <option value="22"> </option>
+            <option value="23"> </option>
+            <option value="24"> </option>
+            <option value="25"> </option>
+            <option value="26"> </option>
+            <option value="27"> </option>
+            <option value="28"> </option>
+            <option value="29"> </option>
+            <option value="30"> </option>
+            <option value="31"> </option>
+          </datalist>
         </div>
         <div class="form-group col-md-4">
-          <label for="year"></label>
-          <select id="year" name="year">
-            <option>Year</option>
-            <option>1995</option>
-            <option>1996</option>
-            <option>1997</option>
-            <option>1998</option>
-            <option>1999</option>
-            <option>2000</option>
-            <option>2001</option>
-          </select>
+          <input
+            list="Year"
+            name="year"
+            formControlName="year"
+            class="form-control"
+            placeholder="Year"
+            id="Y"
+          />
+          <div *ngIf="year.touched && year.invalid" class="text-warning">
+            Year is required
+          </div>
+          <datalist id="Year">
+            <option value="1995"> </option>
+            <option value="1996"> </option>
+            <option value="1997"> </option>
+            <option value="1998"> </option>
+            <option value="1999"> </option>
+            <option value="2000"> </option>
+            <option value="2001"> </option>
+          </datalist>
         </div>
       </div>
       <div class="form-row mt-2 ml-1" id="bd">
         Gender
       </div>
       <div class="form-row mt-2 ml-1" id="bd">
-        <label class="radio-inline"> <input type="radio" />Male </label>
-        <label class="radio-inline"> <input type="radio" />Female </label>
+        <div class="form-group">
+          <input type="radio" name="gender" value="male" checked /> Male
+          <input type="radio" name="gender" value="female" /> Female
+        </div>
       </div>
       <div class="form-row">
         <div class="form-group">
@@ -212,7 +244,10 @@
               placeholder="Password"
             />
           </div>
-          <div *ngIf="password.touched && password.invalid" class="text-danger">
+          <div
+            *ngIf="password.touched && password.invalid"
+            class="text-warning"
+          >
             Password is required
           </div>
         </div>
@@ -237,18 +272,28 @@
           </div>
           <div
             *ngIf="cpassword.touched && cpassword.invalid"
-            class="text-danger"
+            class="text-warning"
           >
             Password is required
           </div>
         </div>
       </div>
-      <div class="form-row mt-3 mb-3 ml-1" id="bd">
+
+      <div class="form mt-3 ml-1 mb-2" id="bd">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" />
+          <input
+            class="form-check-input"
+            type="checkbox"
+            formControlName="check"
+            id="check"
+          />
+
           <label class="form-check-label">
             I accept the <a href="">terms</a> and <a href="">conditions</a>
           </label>
+          <div *ngIf="check.touched && check.invalid" class="text-warning">
+            Select
+          </div>
         </div>
       </div>
       <button

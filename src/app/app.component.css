@@ -1,5 +1,10 @@
 #content-wrapper {
   margin: 5% 35%;
-  background: rgba(56, 56, 56, 0.2);
+  background: rgba(56, 56, 56, 0.3);
   width: 30%;
+}
+@media screen and (max-width: 1200px) {
+  #content-wrapper {
+    width: 35%;
+  }
 }

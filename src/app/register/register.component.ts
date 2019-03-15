@@ -27,6 +27,10 @@ export class RegisterComponent {
       Validators.required,
       Validators.pattern(this.postpattern)
     ]),
+    month: new FormControl("", Validators.required),
+    day: new FormControl("", Validators.required),
+    year: new FormControl("", Validators.required),
+    check: new FormControl("", Validators.required),
     password: new FormControl("", Validators.required),
     cpassword: new FormControl("", Validators.required)
   });
@@ -44,6 +48,18 @@ export class RegisterComponent {
   }
   get postcode() {
     return this.form.get("postcode");
+  }
+  get month() {
+    return this.form.get("month");
+  }
+  get day() {
+    return this.form.get("day");
+  }
+  get year() {
+    return this.form.get("year");
+  }
+  get check() {
+    return this.form.get("check");
   }
   get password() {
     return this.form.get("password");
