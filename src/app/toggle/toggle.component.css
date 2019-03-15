@@ -1,3 +1,19 @@
 ngb-tabset {
   margin: 30px;
 }
+
+::ng-deep .nav-pills .nav-link.active,
+::ng-deep .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #017eff;
+}
+::ng-deep .nav-pills,
+::ng-deep .nav-pills .show > .nav-link {
+  background-color: #2a5987;
+}
+::ng-deep .nav-pills .nav-link {
+  border-radius: 0px;
+  width: 167px;
+  text-align: center;
+  color: #fff !important;
+}
