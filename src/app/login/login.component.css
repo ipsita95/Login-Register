@@ -32,11 +32,11 @@ button {
 .form-check {
   color: #fff;
 }
-a {
+#forgot {
   margin-left: 15%;
 }
 .logo {
-  color: #fff;
+  color: #fff !important;
 }
 .fa-facebook-f {
   background-color: #3a559f;
