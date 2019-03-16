@@ -37,7 +37,7 @@ export class RegisterComponent {
     ]),
     cpassword: new FormControl("", [
       Validators.required,
-      Validators.maxLength(4)
+      Validators.minLength(4)
     ])
   });
   get name() {
