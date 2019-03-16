@@ -31,8 +31,14 @@ export class RegisterComponent {
     day: new FormControl("", Validators.required),
     year: new FormControl("", Validators.required),
     check: new FormControl("", Validators.required),
-    password: new FormControl("", Validators.required),
-    cpassword: new FormControl("", Validators.required)
+    password: new FormControl("", [
+      Validators.required,
+      Validators.minLength(4)
+    ]),
+    cpassword: new FormControl("", [
+      Validators.required,
+      Validators.maxLength(4)
+    ])
   });
   get name() {
     return this.form.get("name");

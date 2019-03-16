@@ -14,7 +14,10 @@ import {
 export class LoginComponent {
   form = new FormGroup({
     email: new FormControl("", [Validators.email, Validators.required]),
-    password: new FormControl("", Validators.required)
+    password: new FormControl("", [
+      Validators.required,
+      Validators.maxLength(4)
+    ])
   });
   get password() {
     return this.form.get("password");
