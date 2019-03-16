@@ -17,3 +17,9 @@ ngb-tabset {
   text-align: center;
   color: #fff !important;
 }
+@media screen and (max-width: 992px) {
+  ::ng-deep .nav-pills,
+  ::ng-deep .nav-pills .show > .nav-link {
+    width: 335px;
+  }
+}

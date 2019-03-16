@@ -7,6 +7,12 @@
     width: 290px;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .form-control {
+    width: 290px;
+  }
+}
 .form-group {
   margin-bottom: 1px !important;
 }
